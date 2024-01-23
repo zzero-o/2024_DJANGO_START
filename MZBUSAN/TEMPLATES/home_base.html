@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta char = "utf-8">
+        <title>MZ부산 | 오늘의 부산 핫플 추천</title>
+        <link rel = "stylesheet" href = {% static "populars/css/home_styles.css" %}>
+    </head>
+    <body>
+        <div id = "header">
+            <a href = "#">MZ부산</a>
+            <a class = "login">
+            {% block date %}
+            {% endblock date %}
+            </a>
+            <a class = "login" href = "#">로그인</a>
+            <a class = "login" href = "#">회원가입</a>
+        </div>
+
+        <div id = "main_intro">
+            <div>
+                <p>유명핫플부터 숨은맛집까지 <br>
+                    MZ취향 잔뜩 담은 MZ부산 </p>
+                <input type = "text"
+                    name = "search"
+                    placeholder = "동네 이름을 쓰세요.   ex. 금정구">
+                <a href = "#">
+                    Search
+                </a>
+            </div>
+        </div>
+
+        <div id = "local_section">
+            <h4>부산 동네 한바퀴</h4>
+            <div id = "local_img">
+            {% block local %}
+            {% endblock local %}
+            </div>
+        </div>
+
+        <div>
+            <div id = "popular_food">
+                <h4>맛집 추천</h4>
+                <a>
+                    <input type = "radio"
+                        name = "food"
+                        value = "insta"> 인스타용
+                    <input type = "radio"
+                        name = "food"
+                        value = "local"> 주민추천
+                    <a id = "plus" href = "#">더보기</a>
+                </a>
+            </div>
+            <div id = "select">
+                <a href = "#">전체</a>
+                <a href = "#">한식</a>
+                <a href = "#">분식</a>
+                <a href = "#">돈가스,회,일식</a>
+                <a href = "#">치킨</a>
+                <a href = "#">피자</a>
+                <a href = "#">아시안,양식</a>
+                <a href = "#">중국집</a>
+                <a href = "#">찜,탕</a>
+                <a href = "#">기타</a>
+            </div>
+
+            <div class = "food">
+            {% block food %}
+            {% endblock food %}
+            </div>
+        </div>
+
+        <div id = "footer">
+            <h5>회사</h5>
+            <a>회사 소개</a>
+            <h5>서비스</h5>
+            <a>공지 사항</a>
+            <a>자주 묻는 질문</a>
+            <h5>인스타</h5>
+            <a href = "#"
+                id = "my_insta">zzz_y0un9</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends './home_base.html' %}
+{% load static %}
+
+{% block date %}
+    <a class = "login">{{date}}</a>
+{% endblock date %}
+
+{% block local %}
+    {% for local in locals %}
+        <a href = "#">
+            <img src = "{% get_static_prefix %}{{local.img_path}}">
+            <p>{{local.name}}</p>
+        </a>
+    {% endfor %}
+{% endblock local %}
+
+{% block food %}
+    {% for menu in menus %}
+        <a href = "{{menu.id}}">
+            <img src = {% get_static_prefix %}{{menu.img_path}}
+                name = "한식" alt= "후루룩촌국수">
+            <p id = "food_name">{{menu.name}}</p>
+            <p>{{menu.location}}</p>
+            <p id = "score">{{menu.score}}</p>
+            <p id = "me">제작자 평가</p>
+            <p>인기메뉴 가격</p>
+            <p id = "money">{{menu.price}}원</p>
+        </a>
+    {% endfor %}
+{% endblock food %}
+
+
+
+

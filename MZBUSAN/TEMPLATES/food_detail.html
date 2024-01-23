@@ -1,0 +1,72 @@
+{% extends "./food_base.html" %}
+{% load static %}
+
+{% block food_intro %}
+<img src = "{% get_static_prefix %}{{menu.img_path}}">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.320957394631!2d129.0852998021472!3d35.24827018332313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568915e4cf42d9b%3A0xd0c60211855cf7ee!2zMzY17ZuE66Oo66Op7LSM6rWt7IiY!5e0!3m2!1sko!2skr!4v1705693680349!5m2!1sko!2skr"
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+{% endblock food_intro %}
+
+{% block food_ment %}
+<h2>{{menu.name}}</h2>
+<span>{{menu.score}}</span>
+<span>제작자 평가</span>
+<a href = "#review">리뷰 보기</a>
+{% endblock food_ment %}
+
+{% block menu %}
+<div class = "menu2">
+    <img src = {% static "populars/images/water-noodle.jpg" %}>
+    <div>
+        <h5>물국수 (보통)</h5>
+        <p>4,000원</p>
+    </div>
+</div>
+<div class = "menu2">
+    <img src = {% static "populars/images/water-noodle.jpg" %}>
+    <div>
+        <h5>물국수 (대)</h5>
+        <p>5,000원</p>
+    </div>
+</div>
+<div class = "menu2">
+    <img src = {% static "populars/images/bibim-noodle.png" %}>
+    <div>
+        <h5>비빔국수 (보통)</h5>
+        <p>5,000원</p>
+    </div>
+</div>
+<div class = "menu2">
+    <img src = {% static "populars/images/bibim-noodle.png" %}>
+    <div>
+        <h5>비빔국수 (보통)</h5>
+        <p>6,000원</p>
+    </div>
+</div>
+<div class = "menu2">
+    <img src = {% static "populars/images/bibimbap.png" %}>
+    <div>
+        <h5>비빔밥 (보통)</h5>
+        <p>6,000원</p>
+    </div>
+</div>
+<div class = "menu2">
+    <img src = {% static "populars/images/bibimbap.png" %}>
+    <div>
+        <h5>비빔밥 (대)</h5>
+        <p>7,000원</p>
+    </div>
+</div>
+{% endblock menu %}
+
+{% block review_ment %}
+<h4>변지영</h4>
+<span>평점 8.5</span>
+<a>리뷰 2</a>
+<a>장소 2</a>
+<a>지역주민</a>
+<p id = "order">물국수 주문</p>
+<p>
+    깍두기 맛집입니다. 메인도 너무 맛있습니다.
+</p>
+{% endblock review_ment %}
